@@ -137,8 +137,11 @@ if(listName === "Today"){
 
 
 });
+let port = process.env.PORT;
+if(port == null || port = ""){
+  port = 3000;
+}
+app.listen(port , function() {
 
-app.listen(3000, function() {
-
-  console.log("The server is running at port 3000");
+  console.log("The server is running.");
 });
