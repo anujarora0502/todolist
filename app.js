@@ -9,7 +9,7 @@ const _ = require("lodash");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
-mongoose.connect("mongodb+srv://admin-anuj:anuj0502@cluster0-nzabb.mongodb.net/todolistDB",{useUnifiedTopology:true,useNewUrlParser:true})
+mongoose.connect("mongodb+srv://admin-anuj:anuj0502@cluster0-nzabb.mongodb.net/todolistDB",{useUnifiedTopology:true,useNewUrlParser:true,useFindAndModify:false})
 
 const itemSchema = new mongoose.Schema({
   name : String
